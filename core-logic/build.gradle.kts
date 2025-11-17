@@ -39,6 +39,9 @@ dependencies {
 
     implementation(libs.androidx.biometric)
 
+    implementation(libs.ktor.android)
+    implementation(libs.ktor.logging)
+
     testImplementation(project(LibraryModule.TestLogic.path))
 }
 

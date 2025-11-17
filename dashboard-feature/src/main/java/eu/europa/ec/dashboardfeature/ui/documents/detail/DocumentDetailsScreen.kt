@@ -56,7 +56,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
-import eu.europa.ec.corelogic.extension.getFriendlyName
 import eu.europa.ec.corelogic.model.DocumentIdentifier
 import eu.europa.ec.corelogic.util.CoreActions
 import eu.europa.ec.dashboardfeature.ui.documents.detail.model.DocumentDetailsUi

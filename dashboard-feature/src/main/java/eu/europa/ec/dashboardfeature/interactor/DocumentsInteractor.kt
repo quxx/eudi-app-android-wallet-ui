@@ -37,7 +37,6 @@ import eu.europa.ec.commonfeature.util.documentHasExpired
 import eu.europa.ec.corelogic.controller.DeleteDocumentPartialState
 import eu.europa.ec.corelogic.controller.IssueDeferredDocumentPartialState
 import eu.europa.ec.corelogic.controller.WalletCoreDocumentsController
-import eu.europa.ec.corelogic.extension.getFriendlyName
 import eu.europa.ec.corelogic.extension.localizedIssuerMetadata
 import eu.europa.ec.corelogic.model.DeferredDocumentDataDomain
 import eu.europa.ec.corelogic.model.DocumentCategory
