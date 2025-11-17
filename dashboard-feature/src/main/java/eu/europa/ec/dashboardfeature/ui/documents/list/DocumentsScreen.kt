@@ -17,6 +17,7 @@
 package eu.europa.ec.dashboardfeature.ui.documents.list
 
 import android.content.Context
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box

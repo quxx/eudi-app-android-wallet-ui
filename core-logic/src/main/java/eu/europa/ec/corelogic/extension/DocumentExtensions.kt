@@ -17,8 +17,10 @@
 package eu.europa.ec.corelogic.extension
 
 import eu.europa.ec.businesslogic.extension.getLocalizedValue
+import eu.europa.ec.corelogic.R
 import eu.europa.ec.eudi.wallet.document.Document
 import eu.europa.ec.eudi.wallet.document.metadata.IssuerMetadata
+import eu.europa.ec.resourceslogic.provider.ResourceProvider
 import java.util.Locale
 
 fun Document.localizedIssuerMetadata(locale: Locale): IssuerMetadata.IssuerDisplay? {
