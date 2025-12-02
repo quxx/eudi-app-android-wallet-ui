@@ -98,11 +98,84 @@ fun getReadableNameFromIdentifier(
     userLocale: Locale,
     fallback: String,
 ): String {
-    return claimMetaData
+    // 1. Versuch: Metadaten vom Issuer (falls irgendwann doch befüllt)
+    val fromMetadata = claimMetaData
         ?.display.getLocalizedClaimName(
             userLocale = userLocale,
             fallback = fallback
         )
+
+    if (fromMetadata != fallback) {
+        return fromMetadata
+    }
+
+    // 2. Fallback: eigene Labels für Promotionsurkunde
+    val lang = userLocale.language.lowercase() // "de", "en", ...
+
+    return when (fallback) {
+        "family_name" ->
+            if (lang == "de") "Nachname" else "Family name"
+
+        "given_name" ->
+            if (lang == "de") "Vorname" else "Given name"
+
+        "degree_title" ->
+            if (lang == "de") "Verliehener Titel" else "Awarded title"
+
+        "awarding_institution" ->
+            if (lang == "de") "Ausstellende Hochschule" else "Awarding institution"
+
+        "disputation_date" ->
+            if (lang == "de") "Datum der Disputation" else "Date of defence"
+
+        "final_grade" ->
+            if (lang == "de") "Gesamtnote" else "Final grade"
+
+        "university_specialization" ->
+            if (lang == "de") "Fachrichtung" else "Specialization"
+
+        "issuing_country" ->
+            if (lang == "de") "Ausstellungsland" else "Issuing country"
+
+        "expiry_date" ->
+            if (lang == "de") "Ablaufdatum" else "Expiry date"
+
+        "issuing_authority" ->
+            if (lang == "de") "Ausstellende Behörde" else "Issuing authority"
+
+        "age_birth_year" ->
+            if (lang == "de") "Geburtsjahr" else "Year of birth"
+
+        "age_in_years" ->
+            if (lang == "de") "Alter" else "Age"
+
+        "birth_date" ->
+            if (lang == "de") "Geburtsdatum" else "Birthday"
+
+        "age_over_18" ->
+            if (lang == "de") "Über 18 Jahre alt" else "Over 18 years"
+
+        "issuance_date" ->
+            if (lang == "de") "Ausstellungsdatum" else "Issuance date"
+
+        "nationality" ->
+            if (lang == "de") "Nationalität" else "Nationality"
+
+        "place_of_birth" ->
+            if (lang == "de") "Geburtsort" else "Place of birth"
+
+        "place_of_birth_country" ->
+            if (lang == "de") "Land" else "Country"
+
+        "place_of_birth_locality" ->
+            if (lang == "de") "Stadt" else "City"
+
+        "place_of_birth_region" ->
+            if (lang == "de") "Bundesland" else "Region"
+
+
+        else -> fallback
+    }
 }
 
 fun createKeyValue(

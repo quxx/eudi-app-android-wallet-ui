@@ -108,7 +108,11 @@ interface WalletCoreConfig {
                         formatType = "urn:eu.europa.ec.eudi:iban:1"
                     ),
                 ),
-                DocumentCategory.Education to emptyList(),
+                DocumentCategory.Education to listOf(
+                    DocumentIdentifier.OTHER(
+                        formatType = "de.demo.promotionsurkunde.1"
+                    ),
+                ),
                 DocumentCategory.Health to listOf(
                     DocumentIdentifier.OTHER(
                         formatType = "eu.europa.ec.eudi.hiid.1"
@@ -184,7 +188,7 @@ interface WalletCoreConfig {
         get() = DocumentIssuanceConfig(
             defaultRule = DocumentIssuanceRule(
                 policy = CredentialPolicy.RotateUse,
-                numberOfCredentials = 1
+                numberOfCredentials = 10
             ),
             documentSpecificRules = mapOf(
                 DocumentIdentifier.MdocPid to DocumentIssuanceRule(

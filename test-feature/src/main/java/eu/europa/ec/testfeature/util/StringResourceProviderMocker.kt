@@ -59,8 +59,8 @@ object StringResourceProviderMocker {
         totalCredentials: Int,
     ) {
         val mockedStrings = listOf(
-            R.string.document_details_document_credentials_info_more_info_text to "More info",
-            R.string.document_details_document_credentials_info_expanded_text_subtitle to "For security reasons, this document can be shared a limited number of times before it needs to be re-issued by the issuing authority.",
+            R.string.document_details_document_credentials_info_more_info_text to "Mehr Info",
+            R.string.document_details_document_credentials_info_expanded_text_subtitle to "Aus Sicherheitsgründen kann dieses Dokument nur eine begrenzte Anzahl Male geteilt werden, bevor es von der ausstellenden Behörde neu ausgestellt werden muss.",
             R.string.document_details_document_credentials_info_expanded_button_hide_text to "Hide",
         ).apply {
             if (docIsLowOnCredentials) {
@@ -78,7 +78,7 @@ object StringResourceProviderMocker {
                 availableCredentials,
                 totalCredentials
             )
-        ).thenReturn("$availableCredentials/$totalCredentials instances remaining")
+        ).thenReturn("$availableCredentials/$totalCredentials Authentifizierungen vorhanden")
     }
 
     fun mockTransformToDocumentDetailsDomainStrings(resourceProvider: ResourceProvider) {

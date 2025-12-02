@@ -79,8 +79,8 @@ const val mockedDocumentSuccessCollapsedSupportingText = "View details"
 const val mockedUriPath1 = "eudi-wallet://example.com/path1"
 const val mockedUriPath2 = "eudi-wallet://example.com/path2"
 const val mockedUuid = "00000000-0000-0000-0000-000000000000"
-const val mockedIssuerLogo = "https://issuer.eudiw.dev/ic-logo.png"
-const val mockedIssuerIdentifier = "https://issuer.eudiw.dev"
+const val mockedIssuerLogo = "https://issuer.thomasclaudi.de/ic-logo.png"
+const val mockedIssuerIdentifier = "https://issuer.thomasclaudi.de/"
 
 private val mockedMdocPidFields: Map<String, ByteArray> = mapOf(
     "family_name" to byteArrayOf(105, 65, 78, 68, 69, 82, 83, 83, 79, 78),
